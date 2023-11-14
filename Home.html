@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Portofolio Gavin</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="nama">
+                    <p><span>G</span>avin.</p>
+                    </div>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Portofolio</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nyatu">
+                <div class="funny">
+                    <img src="funny.jpg" alt="">
+                    </div>
+            <div class="header-teks">
+                <p>Student at IGS</p>
+                <h1>Hi, I'm <span>Gavin</span> Anggreas <br>from Indonesia</h1>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+            <div class="tentang1">
+                <img src="about2.jpg" alt="">
+            </div>
+            <div class="tentang2">
+                <h1 class="me">About Me</h1>
+                <p>
+                    Enthusiastic about the world of computers and coding, I am a tech aficionado driven by a passion for problem-solving and innovation. With a background in programming languages and a keen eye for detail, I revel in turning complex concepts into elegant, functional solutions. Coding isn't just a hobby for me; it's a dynamic journey of continuous learning and creation.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>Designing Websites</li>
+                        <li><span>Web Development Proficiency</span><br>Designing Websites</li>
+                        <li><span>Web Development</span><br>Designing Websites</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023</span><br>OSIS intership</li>
+                        <li><span>2023</span><br>Web Cloning competition hosted by OSIS</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020 - Presence</span><br>Ignatius Global School</li>
+                        <li><span>2014 - 2019</span><br>SD Baptis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for (tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
