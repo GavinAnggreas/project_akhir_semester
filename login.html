@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=w, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cdc9452fcc.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+            
+            <div class="input-box">
+                <input type="text" id="email" placeholder="Username" required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox" value="lsRememberMe" id="rememberMe">Remember me</label>
+                <!-- <a href="#">Forgot password?</a> -->
+            </div>
+
+            <button type="submit" class="btn" onclick="btnClicked(event)" disabled>Login</button>
+
+            
+            <div class="register-link">
+                <h3>Please fill out the form; if you don't, then you can't log in</h3>
+            </div>
+        </form>
+    </div>
+    <script>
+        
+        const cek = document.getElementById("rememberMe");
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.querySelector('input[type="password"]');
+        const loginButton = document.querySelector('.btn');
+
+        if (localStorage.checkbox && localStorage.checkbox !== "") {
+            cek.checked = true;
+            emailInput.value = localStorage.username;
+        } else {
+            cek.checked = false;
+            emailInput.value = "";
+        }
+
+
+        function lsRememberMe() {
+            if (cek.checked && emailInput.value !== "") {
+                localStorage.username = emailInput.value;
+                localStorage.checkbox = "checked";
+            } else {
+                localStorage.username = "";
+                localStorage.checkbox = "";
+            }
+        }
+
+        // -----------------------------disable button kalo lom diisi
+        function verifikasi() {
+            const username = emailInput.value.trim();
+            const password = passwordInput.value.trim();
+
+            if (username !== "" && password !== "") {
+                loginButton.removeAttribute("disabled");
+            } else {
+                loginButton.setAttribute("disabled", "disabled");
+            }
+        }
+
+        function btnClicked(event) {
+            event.preventDefault();
+
+            const username = emailInput.value.trim();
+            const password = passwordInput.value.trim();
+
+            if (username !== "" && password !== "") {
+                lsRememberMe();
+                window.location.href = "Home.html";
+            }
+        }
+
+        emailInput.addEventListener("input", function () {
+            verifikasi();
+        })
+
+        passwordInput.addEventListener("input", function () {
+            verifikasi();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="port.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cdc9452fcc.js" crossorigin="anonymous"></script>
+    <title>Portofolio Gavin</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="nama">
+                    <p><span>G</span>avin.</p>
+                    </div>
+                <ul id="sidemenu">
+                    <li><a href="Home.html #gavin">Home</a></li>
+                    <li><a href="Home.html #about">About</a></li>
+                    <li><a href="Home.html #services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                
+            </nav>
+        <div id="portfolio">
+            <div class="working">
+                <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="work-1.png" alt="">
+                        <div class="layer">
+                            <h3>Social Media App</h3>
+                            <p>Uniting friends worldwide, sharing moments, fostering connections, and inspiring meaningful conversations effortlessly on-the-go.</p>
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="work-3.png" alt="">
+                        <div class="layer">
+                            <h3>Music App</h3>
+                            <p>Elevate your auditory experience with personalized playlists, seamless navigation, and immersive audio exploration for everyone.</p>
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="work-3.png" alt="">
+                        <div class="layer">
+                            <h3>Online Shopping App</h3>
+                            <p>Streamlined browsing, secure transactions, and personalized recommendations—your one-stop online marketplace for effortless shopping delight.</p>
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn" id="more">See more</a>
+            </div>
+        </div>
+        <div id="contact">
+            <div class="kontak">
+                <div class="row">
+                    <div class="contact-left">
+                        <img src="" alt="">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <div class="align">
+                        <p> <i class="fa-solid fa-paper-plane"></i>Apin@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>0821321312312</p>
+                        </div>
+                        <div class="social-icons">
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                        <!-- <div class="turtle">
+                       <img src="kura2.png" alt="">
+                        </div> -->
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    <!-- </div> -->
+        <script>
+             var sidemeu = document.getElementById("sidemenu");
+
+            function openmenu(){
+                sidemeu.style.right = "0";
+            }
+            function closemenu(){
+                sidemeu.style.right = "-200px";
+            }
+        </script>
+</body>
+</html>
